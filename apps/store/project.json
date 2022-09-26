@@ -15,7 +15,10 @@
         "tsConfig": "apps/store/tsconfig.app.json",
         "inlineStyleLanguage": "less",
         "assets": ["apps/store/src/favicon.ico", "apps/store/src/assets"],
-        "styles": ["apps/store/src/styles.less"],
+        "styles": [
+          "apps/store/src/styles.less",
+          "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
+        ],
         "scripts": []
       },
       "configurations": {
