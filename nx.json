@@ -64,5 +64,8 @@
       "style": "less"
     }
   },
-  "defaultProject": "api"
+  "defaultProject": "api",
+  "implicitDependencies": {
+    ".github/workflows/ci.yml": "*"
+  }
 }
