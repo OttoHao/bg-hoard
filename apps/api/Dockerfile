@@ -5,5 +5,4 @@ WORKDIR /app
 # copy all files from the folder its in into the /app folder we switched to
 COPY ./ ./
 # launch the main.js file
-RUN npm i
 CMD node main.js

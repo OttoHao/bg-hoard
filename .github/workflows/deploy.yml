@@ -18,6 +18,10 @@ jobs:
       name: test
     steps:
       - uses: actions/checkout@v2.3.4
+        with:
+          fetch-depth: 0
       - uses: bahmutov/npm-install@v1.4.5
-      - run: npx nx deploy store
-      - run: npx nx deploy api
+      - uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'main' 
+      - run: npx nx affected -- --target=deploy --base=${{ env.NX_BASE }} --parallel

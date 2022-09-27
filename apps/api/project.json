@@ -25,9 +25,17 @@
               "with": "apps/api/src/environments/environment.prod.ts"
             }
           ],
-          "externalDependencies": "all"
+          "externalDependencies": [
+            "@nestjs/microservices",
+            "@nestjs/microservices/microservices-module",
+            "@nestjs/websockets/socket-module",
+            "class-transformer",
+            "class-validator",
+            "cache-manager"
+          ]
         }
-      }
+      },
+      "defaultConfiguration": "production"
     },
     "serve": {
       "executor": "@nrwl/js:node",
@@ -61,7 +69,6 @@
       "outputs": [],
       "options": {
         "commands": [
-          "cp ../../../package.json .",
           "cp ../../../apps/api/Dockerfile .",
           "heroku container:login",
           "heroku container:push web -a minghao-bg-hoard",
