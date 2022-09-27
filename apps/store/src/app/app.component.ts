@@ -9,7 +9,9 @@ import { Game } from '@bg-hoard/util-intertface';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    console.log('component constructed');
+  }
   title = 'Board Game Hoard';
   games = this.http.get<Game[]>('/api/games');
   formatRating = formatRating;
